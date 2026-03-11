@@ -1,0 +1,178 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    touch-action: none;
+}
+
+#game-container {
+    text-align: center;
+}
+
+#controls {
+    margin-bottom: 10px;
+}
+
+#controls select, #controls button {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+#ui-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto 10px auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+#score-container {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#next-container {
+    display: flex;
+    gap: 15px;
+}
+
+.next-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9em;
+}
+
+.fruit-display {
+    font-size: 1.3em;
+    font-weight: bold;
+    min-width: 30px;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: #ddd;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+
+#canvas-container {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background-color: #fff8dc;
+    border: 2px solid #333;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+canvas {
+    display: block;
+}
+
+#math-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#math-btn {
+    font-size: 24px;
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s;
+}
+
+#math-btn:hover {
+    background-color: #45a049;
+}
+
+#math-fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.math-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.math-header h2 {
+    font-size: 36px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.math-header p {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+.math-problems {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 30px;
+}
+
+.math-problem {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f8f9fa;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.math-footer {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* 数学モード時にゲーム画面を白くする */
+.math-mode #canvas-container {
+    background-color: white !important;
+}
+
+.math-mode canvas {
+    opacity: 0 !important;
+}

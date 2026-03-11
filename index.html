@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日も脳トレ！</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+</head>
+<body>
+    <div id="game-container">
+        <h1>スイカゲーム</h1>
+
+        <div id="controls">
+            <select id="mode-select">
+                <option value="normal">ノーマルモード</option>
+                <option value="hard1">ハード1: 中心引力</option>
+                <option value="hard2">ハード2: 幾何学図形</option>
+                <option value="hard4">ハード4: 爆発する1</option>
+                <option value="reverse">逆重力</option>
+                <option value="vector">ベクトル</option>
+                <option value="change">変化</option>
+                <option value="darkness">暗転</option>
+                <option value="expansion">膨張</option>
+            </select>
+            <button id="restart-btn">リセット / スタート</button>
+        </div>
+
+        <div id="ui-header">
+            <div id="score-container">スコア: <span id="score">0</span></div>
+            <div id="next-container">
+                <div class="next-item">
+                    <span>現在:</span>
+                    <span id="current-fruit-val" class="fruit-display"></span>
+                </div>
+                <div class="next-item">
+                    <span>次:</span>
+                    <span id="next-fruit-val" class="fruit-display"></span>
+                </div>
+            </div>
+        </div>
+        <div id="canvas-container"></div>
+        
+        <!-- 数学問題ボタンと表示 -->
+        <div id="math-container">
+            <button id="math-btn">数学問題</button>
+        </div>
+        
+        <!-- 全画面数学問題表示 -->
+        <div id="math-fullscreen" class="hidden">
+            <div class="math-header">
+                <h2>今日の数学</h2>
+                <p>脳トレをしよう！</p>
+            </div>
+            <div class="math-problems">
+                <div class="math-problem" id="problem-1"></div>
+                <div class="math-problem" id="problem-2"></div>
+                <div class="math-problem" id="problem-3"></div>
+                <div class="math-problem" id="problem-4"></div>
+                <div class="math-problem" id="problem-5"></div>
+            </div>
+            <div class="math-footer">
+                <p>答えを入力</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
